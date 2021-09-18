@@ -1,0 +1,10 @@
+version: '3'
+services:
+  workspace:
+    build:
+      context: ./workspace
+    tty: true
+    volumes:
+        - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
+    ports: 
+      - 80:80
